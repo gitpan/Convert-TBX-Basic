@@ -23,10 +23,11 @@ my ($stdout, $stderr) = capture {
         qq{"$script_path"}, qq{"$data_path"}, 'en', 'fr');
 };
 
-ok($? == 0, 'process exited successfully');
+ok($? == 0, 'process exited successfully')
+  or note $stderr;
 
 my $data = get_data_section();
-is_string_nows($stdout, $data->{xml}, 'correct TBX output');
+is_xml($stdout, $data->{xml}, 'correct TBX output');
 is_string_nows($stderr, $data->{log}, 'correct log output');
 
 __DATA__

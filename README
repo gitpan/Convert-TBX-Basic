@@ -2,7 +2,7 @@ NAME
     Convert::TBX::Basic - Convert TBX-Basic data into TBX-Min
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
         use Convert::TBX::Basic 'basic2min';
@@ -58,7 +58,9 @@ TODO
     the conversion process more tranparent to the user.
 
 SEE ALSO
-    basic2min
+    basic2min (the included script)
+    TBX::Min
+    Convert::TBX::Min
 
 AUTHOR
     BYU Translation Research Group <akmtrg@byu.edu>

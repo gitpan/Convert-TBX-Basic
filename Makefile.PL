@@ -29,10 +29,7 @@ my %WriteMakefileArgs = (
     "Log::Any" => 0,
     "Log::Any::Adapter" => 0,
     "Path::Tiny" => 0,
-    "TBX::Min" => 0,
-    "TBX::Min::ConceptEntry" => 0,
-    "TBX::Min::LangGroup" => 0,
-    "TBX::Min::TermGroup" => 0,
+    "TBX::Min" => "0.06",
     "Try::Tiny" => 0,
     "XML::Twig" => 0,
     "autodie" => 0,
@@ -54,7 +51,7 @@ my %WriteMakefileArgs = (
     "Test::NoWarnings" => 0,
     "Test::XML" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }

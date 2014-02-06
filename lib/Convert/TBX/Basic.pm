@@ -10,16 +10,13 @@ package Convert::TBX::Basic;
 use strict;
 use warnings;
 # ABSTRACT: Convert TBX-Basic data into TBX-Min
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 use XML::Twig;
 use autodie;
 use Path::Tiny;
 use Carp;
 use Log::Any '$log';
-use TBX::Min;
-use TBX::Min::ConceptEntry;
-use TBX::Min::LangGroup;
-use TBX::Min::TermGroup;
+use TBX::Min 0.06;
 use Try::Tiny;
 use Exporter::Easy (
     OK => ['basic2min']
@@ -272,7 +269,7 @@ sub _termGrpStart {
 
 # log that an element was not converted
 sub _log_missed {
-    my ($twig, $node) = @_;
+    my (undef, $node) = @_;
     $log->info('element ' . $node->xpath . ' not converted')
         if $log->is_info();
     return;
@@ -290,7 +287,7 @@ Convert::TBX::Basic - Convert TBX-Basic data into TBX-Min
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -366,7 +363,15 @@ to make the conversion process more tranparent to the user.
 
 =head1 SEE ALSO
 
-L<basic2min>
+=over
+
+=item L<basic2min> (the included script)
+
+=item L<TBX::Min>
+
+=item L<Convert::TBX::Min>
+
+=back
 
 =head1 AUTHOR
 

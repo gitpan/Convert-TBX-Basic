@@ -32,17 +32,14 @@ no_index:
 provides:
   Convert::TBX::Basic:
     file: lib/Convert/TBX/Basic.pm
-    version: 0.01
+    version: 0.02
 requires:
   Carp: 0
   Exporter::Easy: 0
   Log::Any: 0
   Log::Any::Adapter: 0
   Path::Tiny: 0
-  TBX::Min: 0
-  TBX::Min::ConceptEntry: 0
-  TBX::Min::LangGroup: 0
-  TBX::Min::TermGroup: 0
+  TBX::Min: 0.06
   Try::Tiny: 0
   XML::Twig: 0
   autodie: 0
@@ -54,7 +51,7 @@ resources:
   homepage: https://github.com/byutrg/p5-Convert-TBX-Basic
   license: http://dev.perl.org/licenses/
   repository: https://github.com/byutrg/p5-Convert-TBX-Basic.git
-version: 0.01
+version: 0.02
 x_BuiltWith:
   modules:
     Capture::Tiny: 0.22
@@ -121,6 +118,7 @@ x_BuiltWith:
     Dist::Zilla::Plugin::Test::Pod::LinkCheck: 1.001
     Dist::Zilla::Plugin::Test::Portability: 2.000003
     Dist::Zilla::Plugin::Test::Synopsis: 2.000002
+    Dist::Zilla::Plugin::Test::UnusedVars: 2.000003
     Dist::Zilla::Plugin::Test::Version: 0.002004
     Dist::Zilla::Plugin::TestRelease: 4.300039
     Dist::Zilla::Plugin::UploadToCPAN: 4.300039
@@ -134,10 +132,7 @@ x_BuiltWith:
     Module::Build: 0.4005
     Path::Tiny: 0.047
     Pod::Coverage::TrustPod: 0.100002
-    TBX::Min: 0.05
-    TBX::Min::ConceptEntry: 0.03
-    TBX::Min::LangGroup: 0.05
-    TBX::Min::TermGroup: 0.05
+    TBX::Min: 0.06
     Test::Base: 0.60
     Test::CPAN::Meta: 0.23
     Test::Exception: 0.31
@@ -250,6 +245,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Test::Synopsis
       name: Test::Synopsis
       version: 2.000002
+    -
+      class: Dist::Zilla::Plugin::Test::UnusedVars
+      name: Test::UnusedVars
+      version: 2.000003
     -
       class: Dist::Zilla::Plugin::Test::Pod::LinkCheck
       name: Test::Pod::LinkCheck

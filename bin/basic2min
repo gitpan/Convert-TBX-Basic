@@ -11,7 +11,7 @@ use strict;
 use warnings;
 # PODNAME: basic2min
 # ABSTRACT: Convert a TBX-Basic file into TBX-Min
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 use Convert::TBX::Basic 'basic2min';
 # send conversion info to stderr
 use Log::Any::Adapter ('Stderr');
@@ -35,7 +35,7 @@ basic2min - Convert a TBX-Basic file into TBX-Min
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
